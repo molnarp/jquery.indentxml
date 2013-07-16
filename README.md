@@ -7,11 +7,11 @@ with google-code-prettify for XML code!
 Example
 -------
 
-> $.indentxml("&lt;a&gt;\n&lt;b/&gt;\n&lt;/a&gt;");
+> $.indentxml("&amp;lt;a&amp;gt;\n&amp;lt;b/&amp;gt;\n&amp;lt;/a&amp;gt;");
 
 outputs:
 
-> <a>
->   <b/>
-> </a>
+> &lt;a&gt;
+>   &lt;b/&gt;
+> &lt;/a&gt;
 
