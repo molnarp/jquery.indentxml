@@ -1,0 +1,26 @@
+{
+    "name": "indentxml",
+    "title": "Indent XML",
+    "version": "0.0.1",
+    "description": "A plugin to indent well-formed, HTML-encoded XML code.",
+    "keywords": [
+        "format",
+        "beautify",
+        "indent",
+        "xml"
+    ],
+    "homepage": "https://github.com/molnarp/jquery.indentxml",
+    "docs": "https://github.com/molnarp/jquery.indentxml/blob/master/README.md",
+    "author": {
+        "name": "Peter Molnar"
+    },
+    "licenses": [
+        {
+            "type": "Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        },
+    ],
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}

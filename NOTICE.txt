@@ -1,0 +1,4 @@
+jquery.indentxml
+Copyright 2013 Peter Molnar.
+
+This product includes software developed by Peter Molnar.
