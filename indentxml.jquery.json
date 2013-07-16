@@ -12,15 +12,16 @@
     "homepage": "https://github.com/molnarp/jquery.indentxml",
     "docs": "https://github.com/molnarp/jquery.indentxml/blob/master/README.md",
     "author": {
-        "name": "Peter Molnar"
+        "name": "Peter Molnar",
+        "url": "https://github.com/molnarp"
     },
     "licenses": [
         {
             "type": "Apache License, Version 2.0",
             "url": "http://www.apache.org/licenses/LICENSE-2.0"
-        },
+        }
     ],
     "dependencies": {
-        "jquery": ">=1.5"
+        "jquery": ">=1.10"
     }
 }
