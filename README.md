@@ -11,7 +11,7 @@ Example
 
 outputs:
 
-> &lt;a&gt;
->   &lt;b/&gt;
-> &lt;/a&gt;
+`&lt;a&gt;
+  &lt;b/&gt;
+&lt;/a&gt;`
 
