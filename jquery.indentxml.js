@@ -19,7 +19,9 @@
     IN_CLOSE_ELEMENT = 4, 
     DOUBLE_QUOTE = 5, 
     SINGLE_QUOTE = 6,
-    COMMENT = 7;
+    COMMENT = 7,
+    PI = 8,
+    PI_QUESTION_MARK = 9;
     
     /**
      * Indents XML code.
@@ -28,6 +30,7 @@
      * @returns The reindented XML code.
      */
     $.indentxml = function(/*String*/ input) {
+        input = $.trim(input);
         var formatted = "";
         var tab = "  ";
         var nextLevel = 0, currentLevel = 0, levelStack = 0;
@@ -61,6 +64,9 @@
                         }
                         else if (c === "!") {
                             state = COMMENT;
+                        }
+                        else if (c === "?") {
+                            state = PI;
                         }
                         else {
                             state = IN_OPEN_ELEMENT;
@@ -119,6 +125,34 @@
                             state = BASE;
                             nextLevel -= 2;
                             
+                        }
+                        break;
+                    case 8: // PI
+                        if (c === "\"") {
+                            stack = state;       
+                            levelStack = nextLevel;
+
+                            nextLevel = 0;
+                            state = DOUBLE_QUOTE;                        
+                        }
+                        else if (c === "'") {
+                            stack = state;
+                            levelStack = nextLevel;
+
+                            nextLevel = 0;
+                            state = SINGLE_QUOTE;
+                        }
+                        else if (c === "?") {
+                            state = PI_QUESTION_MARK;
+                            nextLevel -= 1; // continuation
+                        }
+                        break;
+                    case 9:
+                      if (c === "&gt;") {
+                            state = BASE;
+                            nextLevel -= 1; // continuation
+                        } else {
+                          state = PI;
                         }
                         break;
                 }
